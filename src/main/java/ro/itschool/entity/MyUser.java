@@ -1,4 +1,4 @@
-package com.example.demo.entity;
+package ro.itschool.entity;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

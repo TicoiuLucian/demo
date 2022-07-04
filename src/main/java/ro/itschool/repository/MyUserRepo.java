@@ -1,6 +1,6 @@
-package com.example.demo.repository;
+package ro.itschool.repository;
 
-import com.example.demo.entity.MyUser;
+import ro.itschool.entity.MyUser;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

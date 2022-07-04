@@ -1,7 +1,7 @@
-package com.example.demo.controller;
+package ro.itschool.controller;
 
-import com.example.demo.entity.MyUser;
-import com.example.demo.repository.MyUserRepo;
+import ro.itschool.entity.MyUser;
+import ro.itschool.repository.MyUserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,7 +16,7 @@ public class MyUserController {
     @Autowired
     private MyUserRepo myUserRepo;
 
-    //----------------------------REGISTER-----------------
+    //----------------------------REGISTER----------------------------
     @GetMapping(value = "/register")
     public String registerForm(Model model) {
         model.addAttribute("user", new MyUser());
@@ -28,10 +28,11 @@ public class MyUserController {
         myUserRepo.save(user);
         return "redirect:/my-user/login";
     }
+    //------------------------------------------------------------
 
-    //------------------------------------------------------------------------------
 
-    //----------------------------LOGIN-----------------
+
+    //----------------------------LOGIN----------------------------
     @GetMapping(value = "/login")
     public String loginForm(Model model) {
         model.addAttribute("user", new MyUser());
@@ -51,7 +52,7 @@ public class MyUserController {
         }
     }
 
-    //------------------------------------------------------------------------------
+    //------------------------------------------------------------
 
     @RequestMapping(value = {"/index"})
     public String index() {
